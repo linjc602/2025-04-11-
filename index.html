@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全視窗畫布</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <ul>
+        <li>首頁</li>
+        <li>自我介紹</li>
+        <li>
+            作品集
+            <ul class="submenu">
+                <li onclick="loadIframe('https://linnnn602.github.io/20250328-1/')">第一周</li>
+                <li onclick="loadIframe('https://hackmd.io/@HLqeQe86ToeLEV2jVFo2Kg/Hk5cCIqn1x')">第二周</li>
+                <li onclick="loadIframe('https://hackmd.io/@HLqeQe86ToeLEV2jVFo2Kg/B1z_65mTJl')">第三周</li>
+                <li onclick="loadIframe('https://example.com')">第四周</li>
+            </ul>
+        </li>
+        <li>測驗卷</li>
+        <li>教學影片</li>
+    </ul>
+    <canvas id="canvas"></canvas>
+    <script src="sketch.js"></script>
+  </body>
+</html>

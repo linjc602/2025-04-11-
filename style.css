@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  background-color: #e9edc9; /* 背景顏色 */
+  z-index: 1; /* 最底層 */
+  position: absolute;
+}
+
+iframe {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2); /* 背景透明度 0.2 */
+  border: none;
+  z-index: 2; /* 第二層 */
+  display: none; /* 初始隱藏 */
+}
+
+ul {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* 選單項目之間的間距 */
+  z-index: 3; /* 最上層 */
+}
+
+li {
+  background-color: rgba(162, 210, 255, 0.2); /* 背景顏色透明度 0.2 */
+  padding: 10px 15px;
+  height: 50px; /* 選項高度 */
+  line-height: 30px; /* 垂直置中 */
+  border-radius: 10px; /* 邊框圓角 */
+  border: 2px solid #a2d2ff; /* 邊框顏色 */
+  color: white; /* 字體顏色 */
+  font-family: "微軟正黑體", Arial, sans-serif; /* 字體 */
+  font-size: 20px; /* 字體大小 */
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+li:hover {
+  color: #1d3557; /* 滑鼠移動到上面時文字顏色 */
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* 子選單位置設為父選單項目正下方 */
+  left: 0; /* 子選單與父選單項目左對齊 */
+  background-color: rgba(162, 210, 255, 0.2);
+  list-style: none;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.submenu li {
+  margin: 5px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+li:hover .submenu {
+  display: block; /* 滑鼠懸停時顯示子選單 */
+}
